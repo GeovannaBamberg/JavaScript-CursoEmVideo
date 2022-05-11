@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercio 001</title>
+    <style>
+        body{
+            background-color: rgba(4, 50, 91, 0.56);
+            color: whitesmoke;  
+            font: normal 24px Arial;
+            text-align: center;
+            
+        }
+        body h1 {
+            color: rgb(255, 155, 6);
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Olá, mundo
+    </h1>
+    <h2>
+        bem vindo
+    </h2>
+    <h3>
+    <p id="nome"></p>voce se livrou da maldição 
+    </h3>
+</body>
+<script>
+   /* window.alert("Minha primeira mensagem") 
+    window.confirm("esta gostando de js?") */
+    let nome = window.prompt("qual é seu nome?").value
+    let elementNome = getElementId("nome")
+    elementNome.innerHTML = (nome)
+</script>
+</html>

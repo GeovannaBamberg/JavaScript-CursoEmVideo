@@ -1,0 +1,70 @@
+Operadores do javascript:
+
+Tipos de Operadores{
+    aritméticos [+, -, *, /, %,**]
+    Ordem de precedencia de aritméticos{
+        ()
+        **
+        // ou * ou %
+        + ou -
+    }
+    atribuição[
+        auto-atribuição {
+            n+=3 ou n= n+3 // detalhe ao retribuir, muda o valor da variavel
+            n-=3
+            n*=3
+            n/=3
+            n**=3
+            n%=3
+        } 
+        Incremento{
+            var x= 5
+            x=x+1 ou x+=1
+            para:
+            x++
+            x--
+        }
+    ]
+    relacionais{
+        < menor que
+        > maior que
+        >= maior igual
+        <= menor igual 
+        == igual
+        != diferente
+        ! não
+        === identico (diferente do operador relacional "igual" identico difere se number de string){
+            ex:
+            5 == '5' : true
+            5 === '5' : false
+        }
+
+        detalhe: todas respostas retornaram como booleano (true ou false)
+    }
+    logicos {
+        ! negação
+        && conjunção ou e 
+        || disjuncäo
+
+        Ordem de precedencia dos logicos:
+        1ª !
+        2ª &&
+        3ª ||
+    }
+    ternário{
+        ? = teste
+        true : false = aprovado ou reprovado
+
+        exemplo: 
+        var media = 7
+        media > 7? 'aprovado':'reprovado'
+        resposta: 'reprovado'
+    }
+
+    Ordem precedencia entre todos tipos de operadores:
+    1ª Aritméticos
+    2ª Relacionais
+    3ª Logicos
+    
+
+}

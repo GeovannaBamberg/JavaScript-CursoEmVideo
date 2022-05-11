@@ -1,0 +1,75 @@
+Regras dos indentificadores : 
+
+1ª Podem começar com : Letras, $ ou _
+2ª Não podem começar com:  Numeros
+3ª pode se usar letras juntos com numeros
+4ª é possivel usar acentos e simnbolos
+5ª não pode conter espaços
+6ª não pode usar palavras reservadas do javascript
+7ª Maisculas e minusculas fazem diferença
+8ª Manter nomeclatura correta
+
+--------------------------------------------
+Comandos do Terminal:
+Entrar no node digite: node
+para sair do node digite: .exit
+para limpar o terminal: ctrl+l
+
+--------------------------
+Tipos de dados:
+string
+boolean
+null = object
+undefined
+object{
+    array
+}
+function
+Number{
+infinity
+NaN
+}
+----------------------------
+Comandos de tratamento de numeros:
+detalhe: n é visto como uma variavel nos exemplos abaixo
+
+Number.parseInt(n) // parseInt(n)
+Number.parseFloat(n) // parseFloat(n)
+Number(n)
+exemplo: 
+var n1 = 1545.5
+n1.toFixed(2)
+n1.toFixed(2).replace('.', ',')
+
+// localizar a string e tranforma-la em moeda do local...
+n1.toLocaleString('pt-BR',{style:'currency', currency:'BRL'})
+n1.toLocaleString('pt-BR',{style:'currency', currency:'USD'})
+n1.toLocaleString('pt-BR',{style:'currency', currency:'EUR'})
+
+Comandos de tratamento de string:
+String (n)
+n.toString()
+n.lenght // Quantas caracteres uma string em uma varivavel ou array
+n.toUpperCase() // tranformar uma string totalmente em letras maiusculas
+n.toLowerCase() // tranformar uma string totalmente em letras minusculas
+
+tratamento de formatação de strings + variaveis:
+alert ("eu sou"+n+" prazer em conhece-la") // uso de contentanação
+alert (`Eu sou ${n}, prazer em conhece-la`) // template string
+
+---------
+Comandos de pesquisa:
+
+typeof == é para saber que tipo de dado ou variavel é
+
+----------------------------
+Comentarios no: 
+HTML:
+<!-- -->
+
+JS:
+//
+/* */
+
+CSS:
+/* */
