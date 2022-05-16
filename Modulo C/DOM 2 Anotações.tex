@@ -1,0 +1,57 @@
+EVENTOS DOM: 
+
+evento é tudo que pode acontecer com tal tag, vou pegar como exemplo uma <div>, tudo que pode acontecer com esta div.
+
+tipo mause perto da div ou movendo dentro da div.
+
+eventos com mause {
+    mauseenter [Acontece quando o mause entra dentro da div]
+    mausemove [Acontece quando o mause se move dentro da div]
+    mausedown [Acontece quando se clicar e segurar o botão do mause dentro da div]
+    mauseup [Acontece quando solta o botão do mause]
+    click [Acontece quando aperta e solta rapidamente o botão do mause]
+    mauseout [Acontece quando o mause sai da div]
+}
+
+FUNÇÃO:
+É um conjunto de codigos que só vai acontecer quando um evento acontecer. 
+
+fuction eventoClickDivInteraja(param *opcional*){
+
+}
+
+Para declarar um evento de click no HTML:
+
+exemplo: 
+<h1 id="area" onclick="clicarArea()" onmouseenter="entrouArea()" onmouseout="saiuArea()">interaja....</h1>
+
+usamos o comando começando com ON... e o nome do evento, onclick, onmouseenter e etc...
+
+quando uma linha tem muitos eventos assim como exemplo acima usamos no js:
+ex: 
+var elementArea = document.getElementById('area')
+elementArea.addEventListener('click', clicarArea)
+ elementArea.addEventListener('mouseenter', entrouArea)
+ elementArea.addEventListener('mouseout', saiuArea)
+
+function clicarArea(){
+elementArea.innerHTML = "CLICOU!"
+elementArea.style.background= "green"
+}
+function entrouArea() {
+elementArea.innerHTML = "hmm..."
+}
+function saiuArea(){
+elementArea.innerHTML= "interaja...."
+elementArea.style.background= "red"
+}
+
+observe: addEventListener ele precisa esta ligado com a variavel que pega o elemento HTML, 
+e ele esta totalmente ligado as functions declaradas, então o uso dele não retira o uso da function,
+mas retira o uso totalmente do evento no html como exemplo acima com "onclick"
+
+outro detalhe, no comando addEventListener{
+    elementArea.addEventListener('click', clicarArea)
+    
+    a parte 'click' é o nome do evento, a virgula é para separar do nome da FUNÇÃO.
+}

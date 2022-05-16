@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com dom</title>
+    <style>
+        body{
+            background-color: rgb(197, 197, 197);
+            color: rgb(58, 56, 56);
+            font: normal 24px Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo usar o <strong>DOM</strong> em javaScript</p>
+    <div id="mensagem">Clique em mim</div>
+
+</body>
+<script>
+    //window.document.write('Ola mundo')
+    //window.document.write(window.document.URL)
+   
+    var primeiroParagrafo = document.getElementsByTagName('p')[0]
+    var segundoParagrafo = document.getElementsByTagName('p')[1]
+    let corpoDoHTML = document.body
+    
+    document.write(`Esta escrito assim: ${primeiroParagrafo.innerText}`)
+         primeiroParagrafo.style.color= "White"
+        corpoDoHTML.style.background="black"
+
+    document.write(segundoParagrafo.innerHTML)
+    //var divMensagem = document.getElementById('mensagem')
+    //divMensagem.style.background=("green")
+    //divMensagem.innerText = ('troquei a mensagem...')
+    //window.document.getElementById('mensagem').innerText= 'troquei a mensagem sem declarar uma variavel'
+    //document.getElementById('mensagem').innerHTML=('troquei novamente')
+
+    var divMensagem = document.querySelector('div#mensagem')
+    divMensagem.style.background='blue'
+
+
+
+  
+</script>
+</html>

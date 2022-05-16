@@ -1,0 +1,50 @@
+O que é dom?
+É um Document object Model
+
+É um conjunto de objetos dentro do meu navegador que vai dar acesso aos componentes internos do meu website, por isto não funciona no nodejs, somente quando estiver processando js na web
+
+Arvore dom.
+Raiz do javaScrip se chama ... window
+window{
+    location //localização do meu site, url, a pagina atual[]
+
+    document //documento atual [
+        HTML(
+                HEAD {
+                    meta, TITLE, todas tags que estao dentro da tag head
+                }
+                BODY{
+                    h1, p, div...,  todas tags que estao dentro da tag BODY
+                }
+    )]
+
+    history //que vai guardando toda movimentação dentro do site []
+}
+
+Existe varias formas de acessar cada elemento existente na Arvore DOM, e este modos são:
+1- por Marca (por tag name - getElementsByTagName()[0])
+2- por ID (por id - getElementById())
+3- por NOME (por nome - getElementsByName()[1])
+4- por CLASSE (por CLASSE - getElementsByClassName())
+5- por Seletor (ele nome das id's e class so que com a formataçao do css, 
+quando é para declarar um id (tag#nameid) 
+ou class (tag.nameclass).
+
+querySelector(tag#nameid))
+
+exemplo:
+var divMensagem = document.querySelector('div#mensagem)
+divMensagem.style.background = 'blue'
+
+// Detalhe - toda vez que element estiver no plural, (elements) significa que ele pode pegar varias variaveis de uma vez por isto usamos : [0]
+para indicar qual elemento daquele conjunto de elementos quero pegar, começando pelo numero zero.
+--------------------------------------
+
+neste tipo de situ é necessario especificar o inner:
+
+document.write(segundoParagrafo.innerHTML)
+
+// detalhe - InnerText só pego o texto sem os filhos 
+// innerHTML pega tudo que esta envolvendo aquela tag até os filhos.
+// para pegar a tag body e head náo precisa do comenado - getElement...
+// primeiro declaramos uma variavel e depois mudamos a cor dela atraves da arvore STYLE.
