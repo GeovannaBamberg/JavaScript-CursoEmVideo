@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dentra</title>
+    <style></style>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    <h2>Dirija com segurança</h2>
+
+    <div class="container">
+        <h3>Quantos KM/h você dirigia?</h3>
+        <input type="number" nome="velocidadeDoUsuario" id="velocidadeDoUsuario">
+
+        <button onclick="sistemaMulta()" >Multado?</button>
+
+        <p id="resposta"></p>
+    </div>
+</body>
+<script>
+
+    function sistemaMulta(){
+
+        var elementoVelocidadeUser = Number(document.getElementById("velocidadeDoUsuario").value)  
+        var elementoResposta = document.querySelector("p#resposta")
+
+        if (elementoVelocidadeUser<=60){
+            elementoResposta.innerHTML=(`Sua velocidade atual é ${elementoVelocidadeUser} km/h, esta na linha permitida, continue com segurança`)
+            elementoResposta.innerHTML+=(`<br> Dirija sempre com segurança`)
+        } else{
+            elementoResposta.innerHTML=(`Sua velocidade atual é ${elementoVelocidadeUser} km/h, ultrapassou a velocidade permitida de 60 km/h. </br> <strong> Multado! </strong>`)
+        }
+    }
+    
+
+</script>
+
+</html>
