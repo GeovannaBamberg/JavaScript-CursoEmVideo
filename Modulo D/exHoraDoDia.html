@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Que horas é agora</title>
+    <style>
+        body{
+            background-color: blanchedalmond;
+            color:black;
+            text-align: center;
+        }
+        #container{
+            background-color: azure;
+            padding-bottom: 5%;
+            padding-left: 10%;
+            padding-right: 10%;
+            margin-left: 25%;
+            margin-right: 25%;
+            margin-top: 7%;
+            border-radius: 30%;
+        }
+        #horario{
+            font-size: 24px;
+        }
+        img{
+            width: 300px;
+            height: 300px;
+            border-radius: 100%;
+            margin-right: 10%;
+        }
+        p{
+            font-size: 30px;
+            padding-top: 5%;
+            color: rgb(240, 170, 170);
+            
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Hora do dia</h1>
+    <main id="container">
+        <div id="horario">
+           
+        </div>
+    </main>
+    
+</body>
+<script>
+    var hoje = new Date()
+    var horas= hoje.getHours()
+    var resultado = document.getElementById("horario")
+    horas = 40
+
+if (horas>=24 || horas<12) {
+    resultado.innerHTML=(`<p> É de manhã</p>`)
+    resultado.innerHTML+=(`<img src="https://www.novotempo.com/wp-content/uploads/2020/04/Amanhecer01.jpg" alt="foto-da-manhã">`)
+ 
+ 
+} else {
+    if(horas>=12 && horas<18) {
+    resultado.innerHTML=(`<p> É de tarde</p>`)
+    resultado.innerHTML+=(`<img src="https://cdn.pixabay.com/photo/2015/04/11/08/26/sol-717370_960_720.jpg" alt="foto-da-tarde">`)
+    document.body.style.background ="rgb(135, 41, 7)"
+    document.body.style.color = "rgb(240, 170, 170);"
+ 
+
+}else { 
+    if (horas>=18 && horas<24){
+        resultado.innerHTML=(`<p> É de noite</p>`)
+        resultado.innerHTML+=(`<img src="https://vitormarx.files.wordpress.com/2018/10/noite02.jpg" alt="foto-da-noite">`)
+        document.body.style.background ="black"
+        document.body.style.color = "white"
+    }
+}      
+} 
+
+</script>
+</html>
