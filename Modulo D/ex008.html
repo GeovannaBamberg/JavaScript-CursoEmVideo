@@ -20,15 +20,31 @@
     <div>
         <h1>Pesquisa de nacionalidade</h1>
 
-            <label>Qual é sua nacionalidade <input type="text" name="" id=""></label>
+            <label>Qual é sua nacionalidade <input type="text" name="" id="nacionalidade"></label>
 
             <br>
-            <button onclick="enviar">ok</button>
-
+            <button onclick="enviar()" >ok</button>
+            <h3 id="resposta"></h3>
 
     </div>
 </body>
 <script>
+
+    function enviar(){
+        var elementoNacionalidade = document.getElementById("nacionalidade").value.toUpperCase()
+        var elementoResposta = document.querySelector("h3#resposta")
+        var elementoButton = document.querySelector("button")
+        
+
+        if (elementoNacionalidade == "BRASILEIRA"|| elementoNacionalidade == "BRASILEIRO" || elementoNacionalidade == "BRASIL") {
+            
+            elementoResposta.innerHTML = ("Você nasceu no brasil")
+            
+        } else{
+            elementoResposta.innerHTML=("você não nasceu no brasil")
+        }
+    }
+
    
 </script>
 </html>

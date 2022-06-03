@@ -1,0 +1,68 @@
+Montagem de condição composta
+if (condição) {
+
+} else{
+
+}
+
+Montagem de condição composta elseif:
+
+if (condição) {
+
+} elseif (condição){
+
+}else{
+
+}
+
+Condição aninhada:
+
+if (condition) {
+            
+    } else {
+        if() {
+
+        }else{
+            if(as) {
+
+            }
+        }
+
+    }
+
+condições multiplas sem ser if:
+
+switch (expressão) {
+    case 1:
+        
+        break;
+    case value:
+        break
+
+    default:
+        break;
+}
+detalhe: no switch é obrigatorio ter dois pontos após relatar o value e abrir o bloco daquele caso,
+e obrigatorio ter um break no fim de cada bloco case.
+obs: default funciona como else, que não tem value exato, ele acontece quando não funciona nenhum dos cases.
+
+---------- Objeto incluso -----------
+switch é muito importante para usar em dados pontuais, if e else mais para intervalos 
+switch só funciona com numeros inteiros e strings.
+
+exemplo{
+    var hoje = new Date() 
+    var diaDaSemana = hoje.getDay()
+    console.log (diaDaSemana)
+
+    resposta do console log : 5
+}
+new Date (): é um objeto incluso do js, ele tem incluindo pegar horarios em tempo real (do user), data, dias da semana, ano... etc.
+
+mas o comando objeto precisa sempre, primeiro ser declado (chamado), e depois ser especificado 
+como o exemplo a cima, a especificação seria diaDaSemana.
+
+o comando : hoje.getDay(), ele pega o dia da semana (segunda, terça.. etc), só que em valor numerico e não string, então é (domingo = 0,segunda = 1, terça=2... sexta =5) e assim vai.
+
+o comando: hoje.getDate(), pega o dia da data atual.
+    hoje.getHours(), pega a hora e assim vai.
