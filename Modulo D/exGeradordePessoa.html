@@ -74,7 +74,8 @@
                     resposta.innerHTML+=(`<img src="https://leiturinha.com.br/blog/wp-content/uploads/2018/04/intelig%C3%AAncia-emocional.jpg" alt="criançaFemenina"">`)
                 break;
             }
-        } if (idade>12 && idade<=18) {
+        }else{
+            if (idade>12 && idade<=18) {
             switch (generosChecked) {
                 case "masculino":
                     resposta.innerHTML=(`<p> Um garoto adolecente de ${idade} anos</p>`)
@@ -86,7 +87,6 @@
                     resposta.innerHTML+=(`<img src="https://www.unicef.org/brazil/sites/unicef.org.brazil/files/styles/hero_mobile/public/br_leticia_pinheiro01.jpg?itok=Dm3AT8hX" alt="adolecenteFemenina">`)
                 break;
             }
-            
         } else { 
             if (idade>18 && idade<=60) {
                 switch (generosChecked) {
@@ -124,6 +124,6 @@
             
         }
     }    
-                   
+}               
 </script>
 </html>
