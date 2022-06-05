@@ -43,11 +43,19 @@
         
             <br>
             <button onclick="verificador()">Verificar</button>
-            <div id="resposta"></div>
+            
+            <div id="resposta">
+
+                <p>Insira os dados a cima para gerar uma pessoa</p>
+            </div>
 
         </div>
 
     </main>
+
+    <footer>
+        <p>&COPY; Geovanna Bamberg</p>
+    </footer>
     
 </body>
 <script>
@@ -57,7 +65,7 @@
         var anoNascimento = document.getElementById("anoNascimento").value 
         var generosChecked = document.querySelector('input[name="generos"]:checked').value;
         var resposta = document.getElementById("resposta")
-
+        anoNascimento= Number(anoNascimento)
         var ano= new Date()
         var anoAtual = ano.getFullYear()
         var idade = anoAtual-anoNascimento
@@ -71,7 +79,7 @@
 
                 case "femenino": 
                     resposta.innerHTML=(`<p> Uma menina de ${idade} anos </p>`)
-                    resposta.innerHTML+=(`<img src="https://leiturinha.com.br/blog/wp-content/uploads/2018/04/intelig%C3%AAncia-emocional.jpg" alt="criançaFemenina"">`)
+                    resposta.innerHTML+=(`<img src="https://leiturinha.com.br/blog/wp-content/uploads/2018/04/intelig%C3%AAncia-emocional.jpg">`)
                 break;
             }
         }else{

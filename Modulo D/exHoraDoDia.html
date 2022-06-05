@@ -28,7 +28,7 @@
             width: 300px;
             height: 300px;
             border-radius: 100%;
-            margin-right: 10%;
+            margin: auto;
         }
         p{
             font-size: 30px;
@@ -46,22 +46,23 @@
            
         </div>
     </main>
-    
+<footer>
+        <p>&COPY; Geovanna Bamberg</p>
+</footer>
 </body>
 <script>
     var hoje = new Date()
     var horas= hoje.getHours()
     var resultado = document.getElementById("horario")
     
-
 if (horas>=24 || horas<12) {
-    resultado.innerHTML=(`<p> É de manhã</p>`)
+    resultado.innerHTML=(`<p> É ${horas}h horas da manhã</p>`)
     resultado.innerHTML+=(`<img src="https://www.novotempo.com/wp-content/uploads/2020/04/Amanhecer01.jpg" alt="foto-da-manhã">`)
  
  
 } else {
     if(horas>=12 && horas<18) {
-    resultado.innerHTML=(`<p> É de tarde</p>`)
+    resultado.innerHTML=(`<p> É ${horas}h horas da tarde</p>`)
     resultado.innerHTML+=(`<img src="https://cdn.pixabay.com/photo/2015/04/11/08/26/sol-717370_960_720.jpg" alt="foto-da-tarde">`)
     document.body.style.background ="rgb(135, 41, 7)"
     document.body.style.color = "rgb(240, 170, 170);"
@@ -69,7 +70,7 @@ if (horas>=24 || horas<12) {
 
 }else { 
     if (horas>=18 && horas<24){
-        resultado.innerHTML=(`<p> É de noite</p>`)
+        resultado.innerHTML=(`<p> É ${horas}h horas da noite</p>`)
         resultado.innerHTML+=(`<img src="https://vitormarx.files.wordpress.com/2018/10/noite02.jpg" alt="foto-da-noite">`)
         document.body.style.background ="black"
         document.body.style.color = "white"
