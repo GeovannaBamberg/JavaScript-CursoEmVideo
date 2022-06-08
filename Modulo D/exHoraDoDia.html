@@ -43,7 +43,6 @@
     <h1>Hora do dia</h1>
     <main id="container">
         <div id="horario">
-           
         </div>
     </main>
 <footer>
@@ -58,16 +57,12 @@
 if (horas>=24 || horas<12) {
     resultado.innerHTML=(`<p> É ${horas}h horas da manhã</p>`)
     resultado.innerHTML+=(`<img src="https://www.novotempo.com/wp-content/uploads/2020/04/Amanhecer01.jpg" alt="foto-da-manhã">`)
- 
- 
 } else {
     if(horas>=12 && horas<18) {
     resultado.innerHTML=(`<p> É ${horas}h horas da tarde</p>`)
     resultado.innerHTML+=(`<img src="https://cdn.pixabay.com/photo/2015/04/11/08/26/sol-717370_960_720.jpg" alt="foto-da-tarde">`)
     document.body.style.background ="rgb(135, 41, 7)"
     document.body.style.color = "rgb(240, 170, 170);"
- 
-
 }else { 
     if (horas>=18 && horas<24){
         resultado.innerHTML=(`<p> É ${horas}h horas da noite</p>`)
@@ -75,7 +70,7 @@ if (horas>=24 || horas<12) {
         document.body.style.background ="black"
         document.body.style.color = "white"
     }
-}      
+}
 } 
 
 </script>

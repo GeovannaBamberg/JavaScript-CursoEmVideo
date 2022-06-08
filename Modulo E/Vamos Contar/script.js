@@ -8,22 +8,16 @@ function contar() {
     if (contagemInicial== "" || contagemFinal== "") {
         alert("não dar para começar sem inicio e sem fim.")
 
-    } else if (contagemInicial<=contagemFinal){
+    } else {
         resposta.innerHTML=(`Começará a contagem: <br>`)
 
         for (contador= contagemInicial; contador <= contagemFinal; contador+=contadorPassos) {
 
             resposta.innerHTML+=(`${contador} <br>`)
-            
         } 
-    } else if(contagemInicial>contagemFinal){
-        resposta.innerHTML=(`Começará a contagem: <br>`)
 
-        for (contador= contagemInicial; contador >= contagemFinal; contador= contador-contadorPassos) {
-
+        for (contador= contagemInicial; contador > contagemFinal; contador-=contadorPassos) {
             resposta.innerHTML+=(`${contador} <br>`)
         }
-
-    }
- 
-    }
+    } 
+}
