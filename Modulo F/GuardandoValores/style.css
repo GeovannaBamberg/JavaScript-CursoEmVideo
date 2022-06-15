@@ -19,3 +19,9 @@ footer{
     text-align: center;
     font-style: italic;
 }
+select{
+    padding-right: 15%;
+}
+#finalizar{
+   margin-left: 50%;
+}

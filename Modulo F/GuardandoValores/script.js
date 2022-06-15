@@ -1,5 +1,7 @@
 var valores = []
 let elementoResposta= document.getElementById("respostaDetalhada")
+let elementoBotao = document.getElementById("finalizar")
+elementoBotao.disabled=true
 function analisar(){
    
     var elementoValorDeEntrada = Number(document.getElementById("entradaValor").value)
@@ -26,6 +28,7 @@ function mostrarNoSelect(valorDeEntrada) {
         elementoSelect.innerHTML+=(`<option value="valor${valorDeEntrada}"> valor ${valorDeEntrada} adicionado </option>`)
 
         valores.push(valorDeEntrada)
+        elementoBotao.disabled=false
         
     } else {
         alert ("ja existe este numero adicionado")
@@ -46,12 +49,14 @@ function finalizar(){
         guardando= valores[posicao]
         somatoria = somatoria+guardando
 
-        if (maiorNumeroArray < valores[posicao]){
-            maiorNumeroArray= valores[posicao]
+        if (maiorNumeroArray < guardando){
+            maiorNumeroArray= guardando
         }
-        else if (menorNumeroArray>valores[posicao]) {
-            menorNumeroArray = valores[posicao]
+        if( menorNumeroArray>guardando){
+
+            menorNumeroArray = guardando
         }
+
         
     }
 
