@@ -1,11 +1,11 @@
 var valores = []
 let elementoResposta= document.getElementById("respostaDetalhada")
 let elementoBotao = document.getElementById("finalizar")
+var elementoSelect = document.querySelector("select#selecao")
+
 elementoBotao.disabled=true
 function analisar(){
-   
     var elementoValorDeEntrada = Number(document.getElementById("entradaValor").value)
-
     elementoResposta.innerHTML=(`<p>Ao adicionar todos valores, clique em "Finalizar" para saber detalhadamente </p>`)
 
     if (elementoValorDeEntrada>=1 && elementoValorDeEntrada<=100) {
@@ -22,8 +22,6 @@ function mostrarNoSelect(valorDeEntrada) {
     var pesquisaExistencia = valores.indexOf(valorDeEntrada)
 
     if (pesquisaExistencia == -1) {
-
-        var elementoSelect = document.querySelector("select#selecao")
 
         elementoSelect.innerHTML+=(`<option value="valor${valorDeEntrada}"> valor ${valorDeEntrada} adicionado </option>`)
 
@@ -51,21 +49,23 @@ function finalizar(){
 
         if (maiorNumeroArray < guardando){
             maiorNumeroArray= guardando
-        }
+        } 
+
         if( menorNumeroArray>guardando){
 
             menorNumeroArray = guardando
         }
 
+        }
+
+        elementoResposta.innerHTML+=(`<p> A soma dos valores cadastrados é ${somatoria} ao todo </p>`)
+
+        elementoResposta.innerHTML+=(`<p> O maior valor cadastrado é ${maiorNumeroArray}  </p>`)
+    
+        elementoResposta.innerHTML+=(`<p> O menor valor cadastrado é ${menorNumeroArray}  </p>`)
+    
+        elementoResposta.innerHTML+=(`<p> A media dos valores cadastrado é ${somatoria/quantidadeDeValoresAdicionados}  </p>`)
         
     }
 
-    elementoResposta.innerHTML+=(`<p> A soma dos valores cadastrados é ${somatoria} ao todo </p>`)
 
-    elementoResposta.innerHTML+=(`<p> O maior valor cadastrado é ${maiorNumeroArray}  </p>`)
-
-    elementoResposta.innerHTML+=(`<p> O menor valor cadastrado é ${menorNumeroArray}  </p>`)
-
-    elementoResposta.innerHTML+=(`<p> A media dos valores cadastrado é ${somatoria/quantidadeDeValoresAdicionados}  </p>`)
-    
-}
