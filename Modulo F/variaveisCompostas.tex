@@ -1,0 +1,68 @@
+Arrays ou variaveis compostas {
+     
+variaveis compostas são capazes de armazenar varios valores em uma mesma estrutura
+
+exemplo variavel simples vs variaveis compostas:
+var a1 = "carro1"
+var a2 = "carro2"
+var a3 = "carro3"
+
+vs 
+
+var vagasAutomoveis = ["carro1", "carro2", "carro3"]
+
+console.log vagasAutomoveis[0]
+ 
+obsvação: para pegar o primeiro item do indice
+
+explicando:
+vagasAutomoveis no programa acima é um Array ou vetor
+O vetor é composto de elementos (["carro1", "carro2", "carro3"]), que são guardados por indice, e valor de conteudo.
+
+um array é uma variavel que tem varios elementos cada elemento tem um valor uma chave de indentificação.
+}
+
+para adicionar novos elementos no array {
+exemplo: 
+"let numeros = [5,8,4]
+
+console.log(`Nosso vetor é ${numeros}`)"
+
+Para adicionar o novo elemento na ultima vaga:
+
+numeros[3]=7
+ou
+numeros.push(7)
+
+para saber comprimento (quantidade de elementos):
+numeros.length
+
+ele retornara: "o vetor numeros tem: 5 elementos)
+
+Organiza os elementos em ordem crescente:
+numeros.sort()
+
+para mostrar elementos de vetores um por um :
+
+exemplo: for (let contador = 0; contador < numeros.length; contador++) {
+    console.log(`A posição ${contador} tem o valor ${numeros[contador]} `)
+
+mostrar elementos por FOR IN (é somente para array e objetos):
+
+for(let contador in numeros){
+    console.log(`A posição ${contador} tem o valor ${numeros[contador]} `)
+
+}
+
+Buscar valores no array{
+    exemplo: 
+
+    let numeros = [5,8,4]
+    numeros.indexOF(5)
+    
+    ira me retornar o indice: 0 (que é a posição), mas se eu procurar algo que não existe
+
+    numeros.indexOF(3)
+    
+    ira me retornar o indice: -1 (sim, negativo, pois significa que não encontrou.)
+}
